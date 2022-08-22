@@ -1,40 +1,34 @@
-import { Navbar, Nav } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import { Nav, Navbar, NavDropdown } from "react-bootstrap";
 
-
-function NavBAR() {
+export default function NavBar() {
   return (
-    <>
-      <div>
-        <Navbar bg="dark" variant={"dark"} expand="lg">
-          <Navbar.Brand href="/Home">My-shop </Navbar.Brand>
-          <Navbar.Toggle aria-controls="navbarScroll" />
-          <Navbar.Collapse id="navbarScroll">
-            <Nav variant="tabs" defaultActiveKey="/home">
-              <Nav.Item>
-                <Link to="/">Home</Link>
-              </Nav.Item>
-              <Nav.Item>
-                <Link to="/Contact">
-                  Contact
-                </Link>
-              </Nav.Item>
-              <Nav.Item>
-                <Link to="/FAQ">
-                  FAQ
-                </Link>
-              </Nav.Item>
-              <Nav.Item>
-                <Link to="/">
-                  Nav
-                </Link>
-              </Nav.Item>
-            </Nav>
-          </Navbar.Collapse>
-        </Navbar>
-      </div>
-      <div></div>
-    </>
+    <div>
+      <Navbar p-3 mb-2 bg-info text-white>
+        <Navbar.Brand>My-shop</Navbar.Brand>
+
+        <Navbar.Toggle className="coloring" />
+        <Navbar.Collapse>
+          <Nav>
+            <NavDropdown.Item>
+              <Link to="/">Home</Link>
+            </NavDropdown.Item>
+            <NavDropdown.Item>
+              <Link to="/FAQ">FAQ</Link>
+            </NavDropdown.Item>
+            <NavDropdown.Item>
+              <Link to="/Contact">Contact</Link>
+            </NavDropdown.Item>
+            <NavDropdown.Item>
+              <Link to="/Form">Form</Link>
+            </NavDropdown.Item>
+
+            {/* <Link to="/Creer compte">Creer compte</Link>
+            <Link to="/connexion">connexion</Link> */}
+            <Link to="/Contact">Contact</Link>
+          </Nav>
+        </Navbar.Collapse>
+      </Navbar>
+    </div>
   );
 }
-export default NavBAR;

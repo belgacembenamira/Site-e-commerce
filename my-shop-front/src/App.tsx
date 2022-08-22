@@ -4,7 +4,7 @@ import FAQ from "./FAQ";
 import Contact from "./Contact";
 import Home from "./Home";
 import Form from "./Form";
-import Navbarh from "./Nav";
+import Navbar from "./Nav";
 import Footer from "./Footr";
 
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -12,7 +12,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 function App() {
   return (
     <BrowserRouter>
-      <Navbarh />
+      <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
 
